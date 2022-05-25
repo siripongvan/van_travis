@@ -33,6 +33,7 @@ before_install:
 script:
   - docker run -e CI=true siripongvan/test npm test
 
+
 deploy:
   provider: script 
   script: bash ./deploy.sh
