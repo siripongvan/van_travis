@@ -16,7 +16,7 @@ before_install:
   # - gcloud config set compute/zone asia-southeast1-a
   # - gcloud container clusters get-credentials multi-cluster
   # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  # - docker build -t testecx14/react-test -f ./appclient/Dockerfile.dev ./appclient
+  # - docker build -t siripongvan/test -f ./appclient/Dockerfile.dev ./appclient
   ######--------- kubeconfig ---------######
   # - apk add --no-cache curl
   # - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
@@ -31,7 +31,7 @@ before_install:
   # - kubectl apply -f kubernetes.yml
 
 script:
-  - docker run -e CI=true testecx14/react-test npm test
+  - docker run -e CI=true siripongvan/test npm test
 
 deploy:
   provider: script 
